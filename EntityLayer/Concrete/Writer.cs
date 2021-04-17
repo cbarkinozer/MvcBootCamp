@@ -29,6 +29,6 @@ namespace EntityLayer.Concrete
 
         //Relation area
         public ICollection<Heading> Headings { get; set; }
-        //public ICollection<Content> Contents { get; set; }
+        public ICollection<Content> Contents { get; set; }
     }
 }

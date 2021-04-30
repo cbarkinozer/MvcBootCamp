@@ -19,8 +19,8 @@ namespace MvcBootCamp.Controllers
         }
         public ActionResult GetCategoryList()
         {
-            var categoryValues = categoryManager.GetAllBL();
-            return View(categoryValues);
+            //var categoryValues = categoryManager.GetAllBL();
+            return View();
         }
 
         [HttpGet]
@@ -33,7 +33,7 @@ namespace MvcBootCamp.Controllers
         [HttpPost]
         public ActionResult AddCategory(Category category)
         {
-            categoryManager.CategoryAddBL(category);
+            //categoryManager.CategoryAddBL(category);
             return RedirectToAction("GetCategoryList");
         }
     }

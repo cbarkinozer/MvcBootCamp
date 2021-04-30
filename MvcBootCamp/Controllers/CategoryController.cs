@@ -8,7 +8,7 @@ using System.Web.Mvc;
 
 namespace MvcBootCamp.Controllers
 {
-    
+
     public class CategoryController : Controller
     {
         CategoryManager categoryManager = new CategoryManager();
@@ -17,12 +17,21 @@ namespace MvcBootCamp.Controllers
         {
             return View();
         }
-        public ActionResult GetCategoryList() 
+        public ActionResult GetCategoryList()
         {
             var categoryValues = categoryManager.GetAllBL();
             return View(categoryValues);
         }
-        public ActionResult AddCategory(Category category) 
+
+        [HttpGet]
+        public ActionResult AddCategory()
+        {
+            return View();
+        }
+
+
+        [HttpPost]
+        public ActionResult AddCategory(Category category)
         {
             categoryManager.CategoryAddBL(category);
             return RedirectToAction("GetCategoryList");

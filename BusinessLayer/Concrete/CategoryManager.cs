@@ -11,18 +11,18 @@ namespace BusinessLayer.Concrete
     public class CategoryManager
     {
         GenericRepository<Category> repository = new GenericRepository<Category>();
-        public List<Category> GetAllBL() 
+        public List<Category> GetAllBL()
         {
-            return repository.List();        
+            return repository.List();
         }
-        public void CategoryAddBL(Category category) 
+        public void CategoryAddBL(Category category)
         {
-            if (category.CategoryName==""||category.CategoryName.Length<=3
-                ||category.CategoryDescription==""||category.CategoryName.Length>=51 ) 
+            if (category.CategoryName == "" || category.CategoryName.Length <= 3
+                || category.CategoryDescription == "" || category.CategoryName.Length >= 51)
             {
                 //Error message
             }
-            else 
+            else
             {
                 repository.Insert(category);
             }

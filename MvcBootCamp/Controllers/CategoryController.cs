@@ -41,7 +41,7 @@ namespace MvcBootCamp.Controllers
             ValidationResult validationResult = categoryValidator.Validate(category);
             if (validationResult.IsValid) 
             {
-                categoryManager.CategoryAddBLL(category);
+                categoryManager.CategoryAdd(category);
                 return RedirectToAction("GetCategoryList");
             }
             else

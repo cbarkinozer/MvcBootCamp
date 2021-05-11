@@ -44,5 +44,17 @@ namespace MvcBootCamp.Controllers
             }
             return View();
         }
+        public ActionResult DeleteCategory(int id) 
+        {
+            var categoryValue = categoryManager.GetById(id);
+            categoryManager.CategoryDelete(categoryValue);
+            return RedirectToAction("Index");
+        }
+        [HttpGet]
+        public ActionResult EditCategory(int id) 
+        {
+            var categoryValue = categoryManager.GetById(id);
+            return View(categoryValue);
+        }
     }
 }

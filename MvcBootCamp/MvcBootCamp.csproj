@@ -135,6 +135,7 @@
     <Compile Include="Controllers\AdminCategoryController.cs" />
     <Compile Include="Controllers\CategoryController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\İstatistikController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -2272,10 +2273,12 @@
     <Content Include="Views\AdminCategory\Index.cshtml" />
     <Content Include="Views\AdminCategory\AddCategory.cshtml" />
     <Content Include="Views\AdminCategory\EditCategory.cshtml" />
+    <Content Include="Views\İstatistik\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Models\" />
+    <Folder Include="Views\GetStats\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />

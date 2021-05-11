@@ -56,5 +56,11 @@ namespace MvcBootCamp.Controllers
             var categoryValue = categoryManager.GetById(id);
             return View(categoryValue);
         }
+        [HttpPost]
+        public ActionResult EditCategory(Category category)
+        {
+            categoryManager.CategoryUpdate(category);
+            return RedirectToAction("Index");
+        }
     }
 }

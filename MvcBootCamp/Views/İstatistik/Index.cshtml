@@ -1,0 +1,39 @@
+﻿@using EntityLayer.Concrete
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>İstatistik View</h2>
+<br />
+<table class="table table-bordered">
+    <tr>
+        <td>Toplam Kategori Sayısı</td>
+        <th>Yazılım kategorisi başlıkları</th>
+        <th>Adında 'a' harfi geçen yazar sayısı</th>
+        <th> Durumu true olan ile false olan kategoriler arasındaki fark</th>
+    </tr>
+    @using (Html.BeginForm("GetCategory", "AdminCategory", FormMethod.Get))
+    {
+        <div class="form-group">
+            @Html.Label("Kategori Adı")
+            @Html.TextAreaFor(x => x.CategoryName, new { @class = "form-control" })
+            @Html.ValidationMessageFor(x => x.CategoryDescription)
+            <br /><br />
+            @Html.Label("Açıklamayı yazınız")
+            @Html.TextAreaFor(x => x.CategoryName, new { @class = "form-control" })
+            @Html.TextBoxFor(x => x.CategoryDescription)
+            <br /><br />
+            @Html.Label("Açıklamayı yazınız")
+            @Html.TextAreaFor(x => x.CategoryName, new { @class = "form-control" })
+            @Html.TextBoxFor(x => x.CategoryDescription)
+            <br /><br />
+            @Html.Label("Açıklamayı yazınız")
+            @Html.TextAreaFor(x => x.CategoryName, new { @class = "form-control" })
+            @Html.TextBoxFor(x => x.CategoryDescription)
+        </div>
+    }
+</table>
+
+
+

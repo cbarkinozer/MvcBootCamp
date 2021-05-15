@@ -6,7 +6,7 @@ using System.Web.Mvc;
 
 namespace MvcBootCamp.Controllers
 {
-    public class İstatistikController : Controller
+    public class StatisticController : Controller
     {
         // GET: İstatistik
         public ActionResult Index()

@@ -13,6 +13,7 @@ namespace MvcBootCamp.Controllers
     {
         HeadingManager headingManager = new HeadingManager(new EfHeadingDal());
         CategoryManager categoryManager = new CategoryManager(new EfCategoryDal());
+        WriterManager writerManager = new WriterManager(new EfWriterDal());
         // GET: Heading
         public ActionResult Index()
         {
@@ -28,6 +29,12 @@ namespace MvcBootCamp.Controllers
                                                       Text=x.CategoryName,
                                                       Value=x.CategoryID.ToString()
                                                   }).ToList();
+            List<SelectListItem> valueWriter = (from x in valueWriter.GetList()
+                                                select new SelectListItem
+                                                {
+                                                    Text=x.WriterName+""+x.WriterSurname,
+                                                    Value=x.WriterID.ToSTring()
+                                                });
             ViewBag.valueCategory = valuecategory;
             return View();
         }

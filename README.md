@@ -1,2 +1,2 @@
 # MvcBootCamp
-Murat Yücedağ's camp. ASP.NET MVC (.NET Framework) Web project.
+Murat Yücedağ's bootcamp. ASP.NET MVC (.NET Framework) Web project. <br/>
